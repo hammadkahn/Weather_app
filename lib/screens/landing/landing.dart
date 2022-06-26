@@ -1,3 +1,4 @@
+import 'package:app/screens/landing/dropdown.dart';
 import 'package:app/screens/landing/landing_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
@@ -26,7 +27,7 @@ class Landing extends StatelessWidget {
           ),
           Spacer(),
           Current_loc(),
-          
+          Dropdown(),
           SizedBox(height: 53)
         ],
       ),
