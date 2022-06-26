@@ -5,7 +5,7 @@ import 'package:geolocator/geolocator.dart';
 
 import '../../app/size_config.dart';
 import '../../services/geo_locator.dart';
-import '../city/city_select.dart';
+import '../city/curent_loc_Details.dart';
 
 class Current_loc extends StatefulWidget {
   Current_loc({Key? key}) : super(key: key);

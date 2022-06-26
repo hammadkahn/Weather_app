@@ -1,4 +1,5 @@
-import 'package:app/screens/city/city_select.dart';
+import 'package:app/screens/city/curent_loc_Details.dart';
+import 'package:app/screens/city/select_city.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -16,7 +17,7 @@ class Dropdown extends StatelessWidget {
           Navigator.push(
             context,
             MaterialPageRoute(
-              builder: (context) => City_select(loc: 'l',),
+              builder: (context) => select_city(),
             ),
           );
         },
