@@ -1,19 +1,30 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:geolocator/geolocator.dart';
 
 import '../../app/size_config.dart';
+import '../../services/geo_locator.dart';
 import '../city/city_select.dart';
 
-class Current_loc extends StatelessWidget {
-  const Current_loc({Key? key}) : super(key: key);
+class Current_loc extends StatefulWidget {
+  Current_loc({Key? key}) : super(key: key);
 
+  @override
+  State<Current_loc> createState() => _Current_locState();
+}
+
+class _Current_locState extends State<Current_loc> {
+  
+  
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(right: 21, left: 22, top: 18),
       child: GestureDetector(
-        onTap: () {
+        
+        onTap: () async{
+          Position location=await determinePosition();
           Navigator.push(
             context,
             MaterialPageRoute(
