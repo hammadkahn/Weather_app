@@ -1,5 +1,4 @@
-
-import 'package:app/city/city_select.dart';
+import 'package:app/screens/city/city_select.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -27,19 +26,22 @@ class Dropdown extends StatelessWidget {
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
               color: Color(0xFF6DC9EF)),
-          child: Row(
-            children: [
-              Text(
-                'Select City',
-                style: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.w500,
-                  color: Colors.black,
+          child: Padding(
+            padding: EdgeInsets.only(right: 31, left: 20),
+            child: Row(
+              children: [
+                Text(
+                  'Select City',
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.w500,
+                    color: Colors.white,
+                  ),
                 ),
-              ),
-              Spacer(),
-              Image.asset('assets/images/drop.png', height: 9, width: 16)
-            ],
+                Spacer(),
+                Image.asset('assets/images/drop.png', height: 9, width: 16)
+              ],
+            ),
           ),
         ),
       ),
