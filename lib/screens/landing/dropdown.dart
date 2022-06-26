@@ -16,7 +16,7 @@ class Dropdown extends StatelessWidget {
           Navigator.push(
             context,
             MaterialPageRoute(
-              builder: (context) => City_select(),
+              builder: (context) => City_select(loc: 'l',),
             ),
           );
         },

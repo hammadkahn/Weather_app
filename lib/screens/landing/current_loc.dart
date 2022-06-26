@@ -15,20 +15,20 @@ class Current_loc extends StatefulWidget {
 }
 
 class _Current_locState extends State<Current_loc> {
-  
-  
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(right: 21, left: 22, top: 18),
       child: GestureDetector(
-        
-        onTap: () async{
-          Position location=await determinePosition();
+        onTap: () async {
+          Position location = await determinePosition();
+          print(location);
           Navigator.push(
             context,
             MaterialPageRoute(
-              builder: (context) => City_select(),
+              builder: (context) => City_select(
+                loc: location.toString(),
+              ),
             ),
           );
         },
